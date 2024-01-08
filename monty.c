@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * main - entry point
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: EXIT_SUCCESS or EXIT_FAILURE
+ */
 int main(int argc, char **argv)
 {
 	stack_t *stack = NULL;

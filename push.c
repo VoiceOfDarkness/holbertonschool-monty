@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * _push - adds a new node at the beginning of a stack_t list.
+ * @opcode: opcode
+ * @top_stack: top of the stack
+ * @line: line number
+ * Return: void
+ */
 void _push(char *opcode, stack_t **top_stack, unsigned int line)
 {
 	stack_t *new;

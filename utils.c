@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * check_num - check if a string is a number
+ * @opcode: string to check
+ * Return: 1 if true, 0 if false
+*/
 int check_num(char *opcode)
 {
 	unsigned int idx = 0;
@@ -22,6 +27,11 @@ int check_num(char *opcode)
 	return (1);
 }
 
+/**
+ * free_stack - free a stack
+ * @head: head of the stack
+ * Return: void
+*/
 void free_stack(stack_t *head)
 {
 	stack_t *temp;
@@ -34,6 +44,12 @@ void free_stack(stack_t *head)
 	}
 }
 
+/**
+ * get_code - get the code from a file
+ * @stream: file to read
+ * @stack: stack to use
+ * Return: void
+*/
 void get_code(FILE *stream, stack_t **stack)
 {
 	char *opcode, *token = NULL;
@@ -60,6 +76,13 @@ void get_code(FILE *stream, stack_t **stack)
 	free(opcode);
 }
 
+/**
+ * get_opc - get the opcode
+ * @opcode: opcode to get
+ * @cp_stack: stack to use
+ * @line: line of the opcode
+ * Return: void
+*/
 void get_opc(char *opcode, stack_t **cp_stack, unsigned int line)
 {
 	int idx = 0;
