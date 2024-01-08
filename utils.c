@@ -52,6 +52,36 @@ void get_code(FILE *stream, stack_t **stack)
 			token = strtok(NULL, " \n\t\r");
 			_push(token, stack, count);
 		}
+		else
+		{
+			get_opc(token, stack, count);
+		}
 	}
 	free(opcode);
+}
+
+void get_opc(char *opcode, stack_t **cp_stack, unsigned int line)
+{
+	int idx = 0;
+
+	instruction_t function[] = {
+		{"pall", _pall},
+		{NULL, NULL}
+	};
+
+	while (function[idx].opcode)
+	{
+		if (strcmp(function[idx].opcode, opcode) == 0)
+		{
+			function[idx].f(cp_stack, line);
+			break;
+		}
+		idx++;
+	}
+
+	if (function[idx].opcode == NULL)
+	{
+		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
+		exit(EXIT_FAILURE);
+	}
 }

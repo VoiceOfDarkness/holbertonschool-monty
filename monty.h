@@ -43,6 +43,7 @@ int check_num(char *opcode);
 void get_code(FILE *stream, stack_t **stack);
 void free_stack(stack_t *stack);
 void _push(char *opcode, stack_t **top_stack, unsigned int line);
-
+void _pall(stack_t **sstack, unsigned int __attribute__((unused)) line);
+void get_opc(char *opcode, stack_t **cp_stack, unsigned int line);
 
 #endif
