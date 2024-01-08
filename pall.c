@@ -9,7 +9,7 @@ void _pall(stack_t **stack, unsigned int __attribute__((unused)) line)
 	while (cur)
 	{
 		if (cur != NULL)
-		printf("%d\n", cur->n);
+			printf("%d\n", cur->n);
 		idx++;
 		cur = cur->next;
 	}

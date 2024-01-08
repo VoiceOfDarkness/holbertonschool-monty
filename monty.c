@@ -16,8 +16,10 @@ int main(int argc, char **argv)
 	stream = fopen(arg, "r");
 
 	if (stream == NULL)
-		// ERROR
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", arg);
 		exit(EXIT_FAILURE);
+	}
 
 	get_code(stream, &stack);
 	free_stack(stack);
