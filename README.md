@@ -9,3 +9,8 @@ gcc *.c -o monty
 
 2. **Run the Program:**
 ./monty file
+
+## Authors
+
+Uzeyir Alirzayev
+Abil Samadov
