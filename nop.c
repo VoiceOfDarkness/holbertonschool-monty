@@ -1,4 +1,3 @@
-#include "monty.h"
 /**
  * _nop - does not do anything
  * @stack: stack pointer to head
