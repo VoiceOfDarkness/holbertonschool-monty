@@ -11,7 +11,6 @@ void _pop(stack_t **stack, unsigned int line)
 	if (stack && *stack)
 	{
 		*stack = (*stack)->next;
-		(*stack)->prev = NULL;
 		free(temp);
 		return;
 	}
