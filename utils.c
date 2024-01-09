@@ -89,6 +89,7 @@ void get_opc(char *opcode, stack_t **cp_stack, unsigned int line)
 
 	instruction_t function[] = {
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 
