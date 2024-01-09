@@ -93,6 +93,7 @@ void get_opc(char *opcode, stack_t **cp_stack, unsigned int line)
 		{"pop", _pop},
 		{"nop", _nop},
 		{"swap", _swap},
+		{"add", _add},
 		{NULL, NULL}
 	};
 
