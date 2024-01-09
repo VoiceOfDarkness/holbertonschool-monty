@@ -13,10 +13,10 @@ void _add(stack_t **stack, unsigned int line)
 
 	top = *stack;
 	if (*stack == NULL || (*stack)->next == NULL)
-        {
+	{
 		printf("L%d: can't add, stack too short\n", line);
 		exit(EXIT_FAILURE);
-        }
+	}
 
 	first = top->n;
 	second = top->next->n;
